@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Estamos buscando el hospedaje: {{nombre}}</p>
+     {% if hospedajes is not None %}
+        {% for hospedaje in hospedajes %}
+        <ul>{{hospedaje.nombre}} - {{hospedaje.HabDispo}} hab disp.</ul> 
+        {% endfor %}
+     {% else %}
+        <p> No hay hospedajes para esta busqueda  </p>
+     {% endif %}  
+
+     <p>
+
+      <a href="{% url 'Hospedaje' %}">Volver a hospedaje</a>
+  </p>
+            
+</body>
+</html>
