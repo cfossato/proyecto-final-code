@@ -7,11 +7,14 @@
     <title>hospedaje-detalle</title>
 </head>
 <body>
+
+    <h1>DATOS DEL HOSPEDAJE</h1>
     <p>Nombre del hospedaje: <i>{{hospedaje.nombre}}</i></p>
     <p>Habitacion disponible: <i>{{hospedaje.HabDispo}}</i></p>
 
     <p>
-        <a href="{% url 'hospedaje/List' % }">Regresar</a>
+        <a href="{% url 'List' %}">Regresar</a>
+
     </p>
 </body>
 </html>

@@ -221,28 +221,29 @@ def editarHospedaje(request, hospedaje_nombre):
 class HospedajeList(ListView):
    
    model= hospedaje
-   template_mame="AppCoder/hospedaje_list.html"
+   template_mame= 'hospedaje_list.html'
 
 class HospedajeDetalle(DetailView):
    model= hospedaje
-   template_name="AppCoder/hospedaje_detalle.html"
+   template_name='AppCoder/hospedaje_detalle.html'
 
 class HospedajeCreacion(CreateView):
    model= hospedaje
-   template_name="AppCoder/hospedaje_form.html"
-   success_url=reverse_lazy("hospedaje/list")
+   template_name='AppCoder/hospedaje_form.html'
+   success_url=reverse_lazy("List")
    fields= ['nombre','HabDispo']
 
-class HospedajeUpdate(DeleteView):
+class HospedajeUpdate(UpdateView):
    model= hospedaje
-   success_url="hospedaje/list"
-   template_name="AppCoder/hospedaje_form.html"
+   success_url=reverse_lazy("List")
+   template_name='AppCoder/hospedaje_form.html'
    fields= ['nombre','HabDispo']
+
 
 class HospedajeDelete(DeleteView):
    model= hospedaje
-   template_name="AppCoder/hospedaje_confirm_delete.html"
-   success_url="hospedaje/list"
+   template_name='AppCoder/hospedaje_confirm_delete.html'
+   success_url=reverse_lazy("List")
 
 #About me
 

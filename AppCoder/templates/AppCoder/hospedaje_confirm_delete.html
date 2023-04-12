@@ -9,7 +9,8 @@
 <body>
     <form method="POST"> {% csrf_token %}
         Seguro que deseas borrar el hospedaje "{{ object }}"?
-        <input type="submit" value="Submit"/>
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+
 
     </form>
 </body>
